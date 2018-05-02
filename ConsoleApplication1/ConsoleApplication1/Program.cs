@@ -10,15 +10,17 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("I will say what you say!");
-            // Keep the console window open in debug mode.
-            Console.Write("  ");
             string testString;
-            testString=Console.ReadLine();
-            Console.WriteLine("    " + testString);
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+            Console.WriteLine("I will say what you say!");
+            // Run a loop of repeating incoming text
+            Console.WriteLine("Press CTRL-Z to exit.");
+            do
+            {
+                Console.Write("   ");
+                testString = Console.ReadLine();
+                if (testString != null)
+                    Console.WriteLine("      " + testString);
+            } while (testString != null);
         }
     }
 }
