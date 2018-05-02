@@ -11,7 +11,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             string testString;
-            Console.WriteLine("I will say what you say!");
+            string testReverse;
+            Console.WriteLine("I will say what you say, but backwards!");
             // Run a loop of repeating incoming text
             Console.WriteLine("Press CTRL-Z to exit.");
             do
@@ -19,7 +20,10 @@ namespace ConsoleApplication1
                 Console.Write("   ");
                 testString = Console.ReadLine();
                 if (testString != null)
-                    Console.WriteLine("      " + testString);
+                {
+                    testReverse = new string(testString.ToCharArray().Reverse().ToArray());
+                    Console.WriteLine("      " + testReverse);
+                }
             } while (testString != null);
         }
     }
