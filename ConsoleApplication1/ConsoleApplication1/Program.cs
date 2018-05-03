@@ -19,12 +19,19 @@ namespace ConsoleApplication1
             {
                 Console.Write("   ");
                 testString = Console.ReadLine();
-                if (testString != null)
-                {
-                    testReverse = new string(testString.ToCharArray().Reverse().ToArray());
-                    Console.WriteLine("      " + testReverse);
-                }
+                testReverse = stringReverse(testString);
+                Console.WriteLine("      " + testReverse);
             } while (testString != null);
+        }
+        //Added string reverse logic as a subroutine
+        static string stringReverse(string orig)
+        {
+            if (orig != null)
+            {
+                return new string(orig.ToCharArray().Reverse().ToArray());
+            }
+            else
+                return "No text";
         }
     }
 }
